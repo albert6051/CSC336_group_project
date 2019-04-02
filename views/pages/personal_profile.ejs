@@ -67,7 +67,9 @@
           <h2 class="mb-5">Follow</h2>
   
           <div class="">
-						<a href='#' class="lead">Test Employer</a><br>
+            <% follow.forEach(function(item) { %>
+              <a href='/business/<%= item.followed_ID%>' class="lead"><%= item.username %></a><br>
+            <% }); %>
           </div>
   
         </div>
